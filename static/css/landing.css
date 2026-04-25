@@ -1,0 +1,80 @@
+body {
+    background-color: #FCEED5;
+    font-family: poppins;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    height: 3.5rem;
+    width: 12rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 10rem 0 10rem;
+}
+
+header img {
+    width: 150px;
+    margin: 10px;
+}
+
+header nav {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 5rem;
+}
+
+header ul {
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 8rem 10rem 0 10rem;
+    width: 40vw;
+    gap: 1.5rem;
+}
+
+main h1 {
+    font-size: 50px;
+    font-family: poppins-bold;
+    line-height: 65px;
+}
+
+main p {
+    color: #333333;
+    width: 70%;
+    font-size: 18px;
+}
