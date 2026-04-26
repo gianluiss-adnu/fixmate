@@ -1,14 +1,4 @@
-body {
-    background-color: #FCEED5;
-    font-family: poppins;
-}
-
-h1 {
-    padding: 0;
-    margin: 0;
-}
-
-.btn {
+header .btn {
     border: none;
     background-color: black;
     color: white;
@@ -20,17 +10,6 @@ h1 {
     font-size: 20px;
 }
 
-.bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-    pointer-events: none;
-}
-
-/*
 header {
     display: flex;
     justify-content: space-between;
@@ -58,25 +37,4 @@ header ul {
 header a {
     text-decoration: none;
     color: inherit;
-}
-*/
-
-main {
-    display: flex;
-    flex-direction: column;
-    margin: 8rem 10rem 0 10rem;
-    width: 40vw;
-    gap: 1.5rem;
-}
-
-main h1 {
-    font-size: 50px;
-    font-family: poppins-bold;
-    line-height: 65px;
-}
-
-main p {
-    color: #333333;
-    width: 70%;
-    font-size: 18px;
 }

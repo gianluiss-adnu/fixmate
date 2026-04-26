@@ -7,23 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fixmate</title>
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/landing.css' %}">
 </head>
 <body>
     <img src="{% static 'images/landing-bg.svg' %}" class="bg">
 
-    <header>
-        <img src="{% static 'images/fixmate-logo-black-cropped.svg' %}" alt="fixmate logo">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <button class="btn">Sign Up</button>
-        </nav>
-    </header>
+    {% include 'components/header.html' %}
 
     <main>
         <h1>Discover Trusted Services in Naga City with Fixmate</h1>
