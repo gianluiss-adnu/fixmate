@@ -1,0 +1,19 @@
+<svg width="1440" height="695" viewBox="0 0 1440 695" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3144_170)">
+<path d="M0 0H1440V655C1440 677.091 1422.09 695 1400 695H40C17.9086 695 0 677.091 0 655V0Z" fill="url(#paint0_linear_3144_170)"/>
+<rect x="699.218" y="268" width="635" height="635" rx="99" transform="rotate(9.35484 699.218 268)" fill="black"/>
+<rect x="894.209" y="119.434" width="635" height="701.953" rx="99" transform="rotate(25.23 894.209 119.434)" fill="#FF383C"/>
+<rect x="438.334" y="564" width="635" height="635" rx="99" transform="rotate(56.47 438.334 564)" fill="#FF383C"/>
+<rect x="-64.3296" y="-697" width="635" height="635" rx="99" transform="rotate(25.23 -64.3296 -697)" fill="#FF383C"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_3144_170" x1="0" y1="0" x2="1506.5" y2="713" gradientUnits="userSpaceOnUse">
+<stop offset="0.0616933" stop-color="#FCEED5"/>
+<stop offset="0.751415" stop-color="#FCEED5"/>
+<stop offset="1" stop-color="#FFE7BA"/>
+</linearGradient>
+<clipPath id="clip0_3144_170">
+<path d="M0 0H1440V655C1440 677.091 1422.09 695 1400 695H40C17.9086 695 0 677.091 0 655V0Z" fill="white"/>
+</clipPath>
+</defs>
+</svg>
