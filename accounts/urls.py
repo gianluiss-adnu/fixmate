@@ -5,6 +5,8 @@ urlpatterns = {
     # These are apparently functions for when users visits that url
     # THe functions below are subject to change... Initial setup
 
-    path('register/', views.register), 
+#    path('register/', views.register), 
+    path('register/user', views.register_user),
+    path('register/handyman', views.register_user),
     path('login/', views.login),
 }
