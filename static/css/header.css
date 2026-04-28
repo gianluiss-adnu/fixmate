@@ -1,3 +1,7 @@
+
+
+/*
+
 header .btn {
     border: none;
     background-color: black;
@@ -30,6 +34,58 @@ header nav {
 
 header ul {
     display: flex;
+    gap: 5rem;
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+*/
+header .btn {
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    height: 3.2rem;
+    width: 8rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15vw 0 15vw;
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+}
+
+header img {
+    width: 70px;
+    margin: 0.5rem;
+}
+
+header nav {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 5rem;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
     gap: 5rem;
     list-style: none;
 }
