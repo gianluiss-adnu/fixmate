@@ -42,3 +42,7 @@ a {
 body {
     font-family: poppins, sans-serif;
 }
+
+main {
+    margin-top: 6rem; /* TO COMPENSATE FOR HEADER SPACE ONLY FOR PAGES WITH HEADERS */
+}

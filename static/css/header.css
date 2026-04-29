@@ -44,17 +44,6 @@ header a {
 }
 
 */
-header .btn {
-    border: none;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    height: 3.2rem;
-    width: 8rem;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 20px;
-}
 
 header {
     display: flex;
@@ -69,6 +58,18 @@ header {
     width: 100%;
     background: white;
     z-index: 1000;
+}
+
+header .btn {
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    height: 3rem;
+    width: 7rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 header img {

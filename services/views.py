@@ -6,3 +6,7 @@ def service_list(request):
 
 def service_detail(request, id):
     return render(request, 'services/detail.html', {'id' : id})
+
+
+def service_detail_test(request):
+    return render(request, 'services/detail.html')

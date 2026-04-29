@@ -7,13 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fixmate</title>
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
 </head>
 <body>
 
     {% include 'components/header.html' %}
 
-    <h1>This is details!</h1>
+    <main>
+
+        <div class="section-container">
+            <section class="left-section">
+                <img src="{% static 'images/sample-worker.svg' %}" alt="profile">
+                <h1>Plumbing</h1>
+                <h2>John Doe</h2>
+                <h2>₱500 - ₱1000</h2>
+            </section>
+        
+            <section class="right-section">
+                <div class="details-container">
+                    <div class="detail">
+                        <h4>Service Overview</h4>
+                        <p>Leaks, Broken Fixtures, & Plumbing issues</p>
+                    </div>
+                    <div class="detail">
+                        <h4>Provider Availability</h4>
+                        <p>Monday to Saturdays</p>
+                    </div>
+                    <div class="detail">
+                        <h4>Location Coverage</h4>
+                        <p>Within 50km, Albay, Camarines Sur</p>
+                    </div>
+                    <div class="detail">
+                        <h4>Estimated Duration</h4>
+                        <p>4 hours</p>
+                    </div>
+                    <div class="detail">
+                        <h4>Additional Information</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet porro maiores assumenda corrupti atque
+                            nostrum!</p>
+                    </div>
+                </div>
+                
+                <div class="buttons-container">
+                    <button class="btn">View Profile</button>
+                    <button class="btn">Book Service</button>
+                </div>
+            </section>
+        </div>
+    </main>
     
 </body>
 </html>
