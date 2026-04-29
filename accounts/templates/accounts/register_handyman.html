@@ -6,7 +6,7 @@
 <form method="POST">
     {% csrf_token %}
 
-    <div class="fields">
+    <div class="fields-register">
         <div class="field">
             <label>First Name</label>
             <input type="text" name="first_name">
@@ -33,6 +33,11 @@
         </div>
     
         <div class="field">
+            <label>City / Municipality</label>
+            <input type="text" name="city">
+        </div>
+
+        <div class="field">
             <label>Password</label>
             <input type="password" name="password">
         </div>
@@ -40,11 +45,6 @@
         <div class="field">
             <label>Confirm Password</label>
             <input type="password" name="confirm_password">
-        </div>
-    
-        <div class="field">
-            <label>City / Municipality</label>
-            <input type="text" name="city">
         </div>
     </div>
 
