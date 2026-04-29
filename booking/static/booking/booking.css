@@ -1,3 +1,112 @@
+/* PAGE LAYOUT */
+.booking-container {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    background: #f6f7fb;
+    min-height: 100vh;
+}
+
+/* FORM SECTION */
+.booking-form {
+    flex: 2;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* SUMMARY PANEL */
+.booking-summary {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+/* HEADERS */
 h1 {
-    color: blue;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+/* CARD BLOCKS */
+.card {
+    background: #f9fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+
+/* INPUTS */
+input, textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+/* TIME SLOTS */
+.time-slots {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.time-slots label {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    transition: 0.2s;
+}
+
+.time-slots input {
+    display: none;
+}
+
+.time-slots input:checked + label {
+    background: black;
+    color: white;
+    border-color: black;
+}
+
+/* BUTTON */
+.confirm-btn {
+    width: 100%;
+    padding: 14px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.confirm-btn:hover {
+    opacity: 0.85;
+}
+
+/* SUMMARY BOX */
+.summary-box, .price-box {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f9fafc;
+    border-radius: 8px;
 }
