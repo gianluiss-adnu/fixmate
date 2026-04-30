@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/userprofile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="{% static 'images/fixmate-logo-black-noshadow.svg' %}" alt="fixmate-logo">
+                <div class="logo-container">
+                    <h2>FixMate</h2>
+                    <h6>fixmate@gmail.com</h6>
+                </div>
+            </div>
+
+            <nav>
+               <!-- <a href="/account/" class="nav-link">Overview</a> -->
+                <!-- {% if is_handyman %} 
+                    Will be added when backend is worked on 
+                    <a href="/bookings/requests/" class="nav-link">Job Requests</a>
+                    <a href="/bookings/completed/" class="nav-link">Completed Jobs</a>
+                    <a href="/services/manage/" class="nav-link">My Services</a>
+                -->
+                <!-- {% else %} -->
+                    <a href="/accounts/" class="nav-link">My Bookings</a>
+                <!-- {% endif %} -->
+
+                <a href="/services/" class="nav-link">Browse Services</a>
+                <a href="/profile/edit/" class="nav-link">Edit Profile</a>
+                <a href="/" class="nav-link">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+    </div>
+
+</body>
+</html>

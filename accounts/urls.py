@@ -6,6 +6,7 @@ urlpatterns = {
     # THe functions below are subject to change... Initial setup
 
 #    path('register/', views.register), 
+    path('', views.overview, name='dashboard'),
     path('register/user', views.register_user),
     path('register/handyman', views.register_handyman),
     path('login/', views.login),

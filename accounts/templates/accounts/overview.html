@@ -1,0 +1,114 @@
+{% extends "components/dashboard_base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!---THIS IS MY BOOKINGS MIGHT PUT IT IN /bookings IN THE FUTURE-->
+
+    <main class="main-container">
+        
+        <section class="profile-header">
+            <div class="avatar-container">
+                <img src="{% static 'images/fixmate-logo-black-noshadow.svg' %}" alt="Profile Picture" class="profile-avatar">
+                <span class="avatar-label">My Profile</span>
+            </div>
+
+            <div class="info-card">
+                <h2>Enrique Dela Torre</h2>
+                <div class="info-grid">
+                    <span class="info-label">Phone:</span>
+                    <span class="info-value">+1234567890</span>
+                    
+                    <span class="info-label">Email:</span>
+                    <span class="info-value">Riks@gmail.com</span>
+                    
+                    <span class="info-label">Address:</span>
+                    <span class="info-value">Legazpi City, Albay</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="bookings-section">
+            <h3>My Bookings</h3>
+
+            <div class="booking-card">
+                <img src="https://via.pfp.com/100" alt="Job Image" class="job-image">
+                
+                <div class="job-details">
+                    <h4>Project 1</h4>
+                    <p class="job-category">Plumbing</p>
+                    <span class="badge badge-pending">Pending</span>
+                </div>
+
+                <div class="job-price">
+                    <p class="price-label">Price Range</p>
+                    <p class="price-value">₱500 - ₱1000</p>
+                </div>
+
+                <div class="job-actions-wrapper">
+                    <div class="job-datetime">
+                        <span class="job-date">March 06, 2026</span>
+                        <span class="job-time">Yesterday</span>
+                    </div>
+                    <div class="job-buttons">
+                        <button class="btn btn-cancel">Cancel</button>
+                        <button class="btn btn-view">View more &gt;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-card">
+                <img src="https://via.pfp.com/100" alt="Job Image" class="job-image">
+                
+                <div class="job-details">
+                    <h4>Project 2</h4>
+                    <p class="job-category">Electrical Works</p>
+                    <span class="badge badge-progress">In Progress</span>
+                </div>
+
+                <div class="job-price">
+                    <p class="price-label">Price Range</p>
+                    <p class="price-value">₱500 - ₱1000</p>
+                </div>
+
+                <div class="job-actions-wrapper">
+                    <div class="job-datetime">
+                        <span class="job-date">March 06, 2026</span>
+                        <span class="job-time">Yesterday</span>
+                    </div>
+                    <div class="job-buttons">
+                        <div></div> 
+                        <button class="btn btn-view">View more &gt;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-card">
+                <img src="https://via.pfp.com/100" alt="Job Image" class="job-image">
+                
+                <div class="job-details">
+                    <h4>Project 3</h4>
+                    <p class="job-category">Cleaning</p>
+                    <span class="badge badge-completed">Completed</span>
+                </div>
+
+                <div class="job-price">
+                    <p class="price-label">Price Range</p>
+                    <p class="price-value">₱500 - ₱1000</p>
+                </div>
+
+                <div class="job-actions-wrapper">
+                    <div class="job-datetime">
+                        <span class="job-date">March 02, 2026</span>
+                        <span class="job-time">1 month ago</span>
+                    </div>
+                    <div class="job-buttons">
+                        <div></div>
+                        <button class="btn btn-view">View more &gt;</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+{% endblock %}

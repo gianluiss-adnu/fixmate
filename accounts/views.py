@@ -4,6 +4,8 @@ from django.shortcuts import render
 
 # def register(request):
 #    return render(request, 'accounts/register.html')
+def overview(request):
+    return render(request, 'accounts/overview.html')
 
 def register_user(request):
     return render(request, 'accounts/register_user.html')
