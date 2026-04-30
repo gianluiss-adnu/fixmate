@@ -75,11 +75,16 @@ header .btn {
     border-radius: 50px;
     font-weight: bold;
     font-size: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 header img {
     width: 70px;
     margin: 0.5rem;
+    cursor: pointer;
 }
 
 header nav {
@@ -92,11 +97,40 @@ header nav {
 header ul {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 3rem;
     list-style: none;
 }
 
 header a {
     text-decoration: none;
     color: inherit;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 50px;
+    width: 400px;
+    background-color: rgb(223, 223, 223);
+}
+
+.search-container input {
+    width: 100%;
+    max-width: 350px;
+
+    padding: 10px 4px;
+    /* border: 1px solid #e5e7eb; */
+    border: none;
+    border-radius: 10px;
+
+    outline: none;
+    font-size: 16px;
+    background-color: rgb(223, 223, 223);
+}
+
+.search-container img {
+    width: 20px;
 }

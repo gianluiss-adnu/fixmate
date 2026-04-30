@@ -18,43 +18,48 @@
 
     {% include 'components/header.html' %}
 
-
     <main>
         <section class="filters">
             <h2>Filter</h2>
             <fieldset class="filter-group service-type">
                 <legend>Service Type</legend>
-    
+
                 <label class="filter-option">
                     <input type="radio" name="service_type" value="all" checked>
                     <span class="box"></span>
                     <span class="text">All</span>
                 </label>
-    
+
+                <label class="filter-option">
+                    <input type="radio" name="service_type" value="plumbing">
+                    <span class="box"></span>
+                    <span class="text">Plumbing</span>
+                </label>
+
                 <label class="filter-option">
                     <input type="radio" name="service_type" value="cleaning">
                     <span class="box"></span>
                     <span class="text">Cleaning</span>
                 </label>
-    
+
                 <label class="filter-option">
                     <input type="radio" name="service_type" value="repair">
                     <span class="box"></span>
                     <span class="text">Repair</span>
                 </label>
-    
+
                 <label class="filter-option">
                     <input type="radio" name="service_type" value="installation">
                     <span class="box"></span>
                     <span class="text">Installation</span>
                 </label>
-    
+
                 <label class="filter-option">
                     <input type="radio" name="service_type" value="maintenance">
                     <span class="box"></span>
                     <span class="text">Maintenance</span>
                 </label>
-    
+
                 <label class="filter-option">
                     <input type="radio" name="service_type" value="outdoor">
                     <span class="box"></span>
@@ -64,7 +69,7 @@
 
             <fieldset class="filter-group price-range">
                 <legend>Price Range</legend>
-    
+
                 <div class="price-inputs">
                     <input type="number" name="min_price" placeholder="Min" min="0">
                     <input type="number" name="max_price" placeholder="Max" min="0">
@@ -72,113 +77,124 @@
             </fieldset>
 
         </section>
-    
+
         <section>
             <div class="top-section">
                 <h2>Services</h2>
                 <h6>52 Services</h6>
             </div>
-    
+
             <div class="service-grid">
-                <div class="service-card">
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
-                <div class="service-card">
+                </a>
+
+                <a href="/services/1/" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
                         <h4>Plumbing</h4>
                         <h6>Other Details</h6>
                         <h6>Price Range: ₱500 to ₱1000</h6>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
-    
+
     </main>
 
 

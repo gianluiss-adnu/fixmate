@@ -12,12 +12,23 @@
 <body>
     <img src="{% static 'images/landing-bg.svg' %}" class="bg">
 
-    {% include 'components/header.html' %}
+    <header>
+        <img src="{% static 'images/fixmate-logo-black-noshadow.svg' %}" alt="fixmate logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a class="btn" href="/accounts/register/handyman">Sign Up</a>
+        </nav>
+    </header>
 
     <main>
         <h1>Discover Trusted Services in Naga City with Fixmate</h1>
         <p>Access trusted local professionals for repairs, maintenance, and everyday services, all in one convenient platform.</p>
-        <button class="btn">Find Services</button>
+        <a class="btn" href="/services/">Find Services</a>
     </main>
 </body>
 </html>

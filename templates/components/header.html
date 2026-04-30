@@ -1,5 +1,37 @@
 {% load static %}
 
+<header class="main-header">
+    <img src="{% static 'images/fixmate-logo-black-noshadow.svg' %}" alt="fixmate logo">
+
+    <!-- Search Bar -->
+    <form class="search-container">
+        <img src="{% static 'images/search-icon.svg' %}">
+        <input class="search-input" type="text" placeholder="Search services, handymen...">
+    </form>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/accounts/">Dashboard</a></li>
+            <li><a href="/">Logout</a></li>
+        </ul>
+
+        <div class="choice-icons">
+
+        </div>
+
+        <!-- {% if user.is_authenticated %} 
+            <a class="btn" href="/accounts/">Dashboard</a>
+            <a class="btn-secondary" href="/accounts/logout/">Logout</a>
+    -->
+        <!-- {% else %} 
+            <a class="btn" href="/accounts/register/user/">Sign Up</a>
+            <a class="btn-secondary" href="/accounts/login/">Login</a>
+        {% endif %} -->
+    </nav>
+</header>
+<!--
 <header>
     <img src="{% static 'images/fixmate-logo-black-noshadow.svg' %}" alt="fixmate logo">
     <nav>
@@ -9,6 +41,7 @@
             <li><a href="">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        <button class="btn">Sign Up</button>
+        <a class="btn" href="/accounts/register/handyman">Sign Up</a>
     </nav>
 </header>
+-->
