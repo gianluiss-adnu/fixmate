@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-urlpatterns = {
+urlpatterns = [
     # These are apparently functions for when users visits that url
     # THe functions below are subject to change... Initial setup
 
@@ -10,4 +10,4 @@ urlpatterns = {
     path('register/user', views.register_user),
     path('register/handyman', views.register_handyman),
     path('login/', views.login),
-}
+]
