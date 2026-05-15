@@ -1,12 +1,18 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login as auth_login
 
 User = get_user_model()
 
 # Create your views here.
+@login_required
+def customer_dashboard(request):
+    return render(request, "accounts/customer_dashboard.html")
 
-def overview(request):
-    return render(request, 'accounts/overview.html')
+@login_required
+def provider_dashboard(request):
+    return render(request, "accounts/provider_dashboard.html")
 
 def register(request):
 
@@ -45,4 +51,23 @@ def register(request):
     return render(request, 'accounts/register.html')
 
 def login(request):
-    return render(request, 'accounts/login.html')
+    if request.method == "POST":
+
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            auth_login(request, user)
+
+            if user.user_type == "customer":
+                return redirect("/accounts/customer/dashboard/")
+            else:
+                return redirect("/accounts/provider/dashboard/")
+
+        return render(request, "accounts/login.html", {
+            "error": "Invalid username or password"
+        })
+
+    return render(request, "accounts/login.html")
