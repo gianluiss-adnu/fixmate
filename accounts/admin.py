@@ -15,4 +15,6 @@ class CustomUserAdmin(UserAdmin):
         ("FixMate Role", {"fields": ("user_type",)}),
     )
 
+    list_display = ("id", "username", "email", "user_type", "is_staff", "is_active")
+
 admin.site.register(User, CustomUserAdmin)
