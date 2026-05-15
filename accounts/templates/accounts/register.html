@@ -1,0 +1,66 @@
+{% extends "accounts/auth_base.html" %}
+
+{% block content %}
+<h2>Create Account</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <div class="fields-register">
+
+        <div class="field">
+            <label>First Name</label>
+            <input type="text" name="first_name" value="{{ form_data.first_name }}" required>
+        </div>
+
+        <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="last_name" value="{{ form_data.last_name }}" required>
+        </div>
+
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" value="{{ form_data.username }}" required>
+        </div>
+
+        <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" value="{{ form_data.email }}" required>
+        </div>
+
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" required>
+        </div>
+
+        <div class="field">
+            <label>Confirm Password</label>
+            <input type="password" name="confirm_password" required>
+        </div>
+
+
+
+        <select name="user_type" required>
+            <option value="" disabled {% if not form_data.user_type %}selected{% endif %}>
+                Select User Type
+            </option>
+            <option value="customer" {% if form_data.user_type == "customer" %}selected{% endif %}>
+                Customer
+            </option>
+            <option value="service_provider" {% if form_data.user_type == "service_provider" %}selected{% endif %}>
+                Service Provider
+            </option>
+        </select>
+
+    </div>
+
+    <button type="submit">Sign Up</button>
+</form>
+
+<div class="auth-links">
+    <p>
+        Already have an account?
+        <a href="/accounts/login/">Login</a>
+    </p>
+</div>
+{% endblock %}
