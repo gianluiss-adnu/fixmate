@@ -14,22 +14,16 @@
 <div class="booking-container">
 
     <!-- BOOKING FORM -->
-    <form class="booking-form" method="POST" action="{% url 'create_booking' %}">
+    <form class="booking-form" method="POST" action="{% url 'create_booking' service.id %}">
         {% csrf_token %}
 
         <h1>Book a Service</h1>
 
-        <!-- SERVICE SELECT -->
+        <!-- SELECTED SERVICE -->
         <div class="card">
-            <h3>Select Service</h3>
-
-            <select name="service" required>
-                {% for service in services %}
-                    <option value="{{ service.id }}">
-                        {{ service.name }} - ₱{{ service.price }}
-                    </option>
-                {% endfor %}
-            </select>
+            <h3>Selected Service</h3>
+            <p>{{ service.name }}</p>
+            <p>₱{{ service.price }}</p>
         </div>
 
         <!-- DATE -->
@@ -43,9 +37,20 @@
             <label>Select Time Slot</label>
 
             <div class="time-slots">
-                <label><input type="radio" name="scheduled_time" value="09:00"> 9:00 AM</label>
-                <label><input type="radio" name="scheduled_time" value="13:00"> 1:00 PM</label>
-                <label><input type="radio" name="scheduled_time" value="16:00"> 4:00 PM</label>
+                <label>
+                    <input type="radio" name="scheduled_time" value="09:00" required>
+                    9:00 AM
+                </label>
+
+                <label>
+                    <input type="radio" name="scheduled_time" value="13:00">
+                    1:00 PM
+                </label>
+
+                <label>
+                    <input type="radio" name="scheduled_time" value="16:00">
+                    4:00 PM
+                </label>
             </div>
         </div>
 
@@ -65,7 +70,12 @@
         <!-- NOTES -->
         <div class="card">
             <label for="notes">Additional Notes</label>
-            <textarea name="notes" rows="4" placeholder="Describe the issue..."></textarea>
+
+            <textarea
+                name="notes"
+                rows="4"
+                placeholder="Describe the issue..."
+            ></textarea>
         </div>
 
         <!-- SUBMIT -->
@@ -75,13 +85,13 @@
 
     </form>
 
-    <!-- SUMMARY PANEL (still frontend only) -->
+    <!-- SUMMARY PANEL -->
     <div class="booking-summary">
 
         <h2>Summary</h2>
 
         <div class="summary-box">
-            <p><strong>Service:</strong> Select above</p>
+            <p><strong>Service:</strong> {{ service.name }}</p>
             <p><strong>Date:</strong> --</p>
             <p><strong>Time:</strong> --</p>
             <p><strong>Address:</strong> --</p>
@@ -89,7 +99,7 @@
 
         <div class="price-box">
             <h3>Total</h3>
-            <p>Varies per service</p>
+            <p>₱{{ service.price }}</p>
         </div>
 
     </div>

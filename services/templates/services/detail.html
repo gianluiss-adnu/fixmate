@@ -20,9 +20,9 @@
         <div class="section-container">
             <section class="left-section">
                 <img src="{% static 'images/sample-worker.svg' %}" alt="profile">
-                <h1>Plumbing</h1>
-                <h2>John Doe</h2>
-                <h2>₱500 - ₱1000</h2>
+                <h1>{{ service.name }}</h1>
+                <h2>{{ service.provider.first_name }} {{ service.provider.last_name }}</h2>
+                <h2>₱{{ service.price }}</h2>
             </section>
         
             <section class="right-section">
@@ -52,7 +52,7 @@
                 
                 <div class="buttons-container">
                     <a class="btn" href="">View Profile</a>
-                    <a class="btn" href="/booking/">Book Service</a>
+                    <a class="btn" href="{% url 'create_booking' service.id %}">Book Service</a>
                 </div>
             </section>
         </div>

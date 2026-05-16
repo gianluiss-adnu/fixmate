@@ -8,30 +8,38 @@ from accounts.models import Address
 # Create your views here.
 
 @login_required
-def booking_page(request):
-    services = Service.objects.all()
+def create_booking(request, service_id):
+
+    service = get_object_or_404(Service, id=service_id)
     addresses = Address.objects.filter(user=request.user)
 
+    if request.method == "POST":
+        address_id = request.POST.get("address")
+
+        # ensure address belongs to user
+        address = get_object_or_404(
+            Address,
+            id=address_id,
+            user=request.user
+        )
+
+        Booking.objects.create(
+            customer=request.user,
+            service=service,
+            address=address,
+            scheduled_date=request.POST.get("scheduled_date"),
+            scheduled_time=request.POST.get("scheduled_time"),
+            notes=request.POST.get("notes", ""),
+            status=Booking.Status.PENDING
+        )
+        return redirect("customer_dashboard")
+
     return render(request, "booking/booking_page.html", {
-        "services": services,
+        "service": service,
         "addresses": addresses
     })
 
 
-@login_required
-def create_booking(request):
-    if request.method == "POST":
-
-        Booking.objects.create(
-            customer=request.user,
-            service_id=request.POST.get("service"),
-            address_id=request.POST.get("address"),
-            scheduled_date=request.POST.get("scheduled_date"),
-            scheduled_time=request.POST.get("scheduled_time"),
-            notes=request.POST.get("notes", "")
-        )
-
-        return redirect("customer_dashboard")
 
 # For provider actions
 @login_required

@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <!-- <link rel="stylesheet" href="{% static 'css/footer.css' %}"> -->
 
 </head>
+
 <body>
 
 
@@ -81,122 +83,33 @@
         <section>
             <div class="top-section">
                 <h2>Services</h2>
-                <h6>52 Services</h6>
+                <h6>{{ services|length }} Services</h6>
             </div>
 
             <div class="service-grid">
-                <a href="/services/1/" class="service-card">
+                {% for service in services %}
+
+                <a href="{% url 'service_detail' service.id %}" class="service-card">
                     <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
                     <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
+                        <h4>{{ service.name }}</h4>
+                        <h6>{{ service.description|default:"Other Details" }}</h6>
+                        <h6>
+                            Price: ₱{{ service.price }}
+                        </h6>
                     </div>
                 </a>
 
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
-
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
-
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
-
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
-
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
-
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
-
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
-
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
-
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
-
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
-
-                <a href="/services/1/" class="service-card">
-                    <img src="{% static 'images/sample-worker.svg' %}" alt="handyman profile">
-                    <div class="card-detail">
-                        <h4>Plumbing</h4>
-                        <h6>Other Details</h6>
-                        <h6>Price Range: ₱500 to ₱1000</h6>
-                    </div>
-                </a>
+                {% empty %}
+                <p>No services available.</p>
+                {% endfor %}
             </div>
+
         </section>
 
     </main>
 
 
 </body>
+
 </html>
